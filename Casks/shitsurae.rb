@@ -1,6 +1,6 @@
 cask "shitsurae" do
-  version "0.0.6"
-  sha256 "5418958d3de0aff81a1e72010d4a0add97363e15c6d0ad0570894abddb77f0a4"
+  version "0.0.7"
+  sha256 "89118c94d7ba87d2b730beb91b23c28f26baac2fdf2e406416a023853e749c8f"
 
   url "https://github.com/yuki-yano/shitsurae/releases/download/app-v#{version}/Shitsurae.app.tar.gz"
   name "Shitsurae"
