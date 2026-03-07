@@ -22,7 +22,12 @@ jobs:
       HOMEBREW_GITHUB_API_TOKEN: ${{ github.token }}
     steps:
       - uses: actions/checkout@v4
+        if: github.event_name != 'workflow_run'
         with:
-          ref: ${{ github.event.workflow_run.head_sha || github.sha }}
+          ref: ${{ github.sha }}
+      - uses: actions/checkout@v4
+        if: github.event_name == 'workflow_run'
+        with:
+          ref: ${{ github.event.workflow_run.head_branch }}
       - name: Run Homebrew cask audit
         run: ./scripts/audit-cask.sh
