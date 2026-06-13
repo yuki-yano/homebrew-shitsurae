@@ -13,7 +13,7 @@ cask "shitsurae" do
     strategy :github_releases
   end
 
-  depends_on macos: ">= :sequoia"
+  depends_on macos: :sequoia
 
   app "Shitsurae.app"
   binary "#{appdir}/Shitsurae.app/Contents/Resources/shitsurae"
